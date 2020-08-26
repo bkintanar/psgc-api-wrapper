@@ -1,0 +1,31 @@
+{
+    "name": "bkintanar/psgc-api-wrapper",
+    "description": "PHP Wrapper for Philippine Standard Geographic Code API",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Bertrand Kintanar",
+            "email": "bertrand.kintanar@gmail.com"
+        }
+    ],
+    "require": {
+        "guzzlehttp/guzzle": "^6.5",
+        "illuminate/support": "^6 || ^7",
+        "ext-json": "*"
+    },
+    "autoload": {
+        "psr-4": {
+            "PSGC\\": "src"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "PSGC\\Providers\\PSGCServiceProvider"
+            ]
+        }
+    },
+    "prefer-stable": true,
+    "minimum-stability": "dev"
+}
