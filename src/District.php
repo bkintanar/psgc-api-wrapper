@@ -4,7 +4,7 @@ namespace PSGC;
 
 class District extends Base
 {
-    protected array $validIncludes = ['cities'];
+    protected array $validIncludes = ['cities', 'municipalities'];
 
     /**
      * District constructor.

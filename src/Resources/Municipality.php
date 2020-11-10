@@ -18,6 +18,8 @@ class Municipality extends BaseResource
 
     public Province $province;
 
+    public District $district;
+
     public Region $region;
 
 
@@ -32,6 +34,10 @@ class Municipality extends BaseResource
 
         if (property_exists($data, 'province')) {
             $this->province = new Province($data->province);
+        }
+
+        if (property_exists($data, 'district')) {
+            $this->district = new District($data->district);
         }
 
         if (property_exists($data, 'region')) {
