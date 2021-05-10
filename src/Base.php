@@ -29,7 +29,7 @@ class Base
      */
     public function __construct()
     {
-        $this->client = new Client(['base_uri' => 'http://bkintanar.site/api/']);
+        $this->client = new Client(['base_uri' => 'http://bkintanar-psgc.herokuapp.com/api/']);
     }
 
     /**
@@ -75,6 +75,17 @@ class Base
         $this->perPage = 'all';
 
         return $this->request();
+    }
+
+    public function first()
+    {
+        $response = $this->get();
+
+        if ($response) {
+            return $response->first();
+        }
+
+        return collect();
     }
 
     /**
